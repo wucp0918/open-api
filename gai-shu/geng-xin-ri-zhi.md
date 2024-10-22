@@ -6,6 +6,6 @@
 
 <summary>2024年10月22日</summary>
 
-all api create
+新建所有API
 
 </details>
