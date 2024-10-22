@@ -12,7 +12,10 @@ icon: image-landscape
 </thead>
 <tbody>
 <tr><td>游戏 API</td><td></td><td></td><td><a href="./interface/game.md">/interface/game.md</a></td></tr>
-<tr><td>转账钱包 API</td><td></td><td></td><td><a href="./interface/bank.md">/interface/bank.md</a></td></tr>
-<tr><td>交易 API</td><td></td><td></td><td><a href="./interface/transaction.md.md">/interface/transaction.md</a></td></tr>
+<tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr>
+<tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="getting-started/publish-your-docs.md">publish-your-docs.md</a></td></tr>
+
+<!-- <tr><td>转账钱包 API</td><td></td><td></td><td><a href="./interface/bank.md">/interface/bank.md</a></td></tr>
+<tr><td>交易 API</td><td></td><td></td><td><a href="./interface/transaction.md.md">/interface/transaction.md</a></td></tr> -->
 </tbody>
 </table>
