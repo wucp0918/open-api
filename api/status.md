@@ -2,7 +2,7 @@
 icon: hand-pointer
 ---
 
-# Interactive blocks
+# API 响应状态
 
 In addition to the default Markdown you can write, GitBook has a number of out-of-the-box interactive blocks you can use. You can find interactive blocks by pressing `/` from within the editor.
 
@@ -20,9 +20,10 @@ Add images, embedded content, code blocks, and more.
 
 ```javascript
 const handleFetchEvent = async (request, context) => {
-    return new Response({message: "Hello World"});
+  return new Response({ message: "Hello World" });
 };
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -47,4 +48,3 @@ Expandable blocks are helpful in condensing what could otherwise be a lengthy pa
 {% hint style="info" %}
 GitBook supports thousands of embedded websites out-of-the-box, simply by pasting their links. Feel free to check out which ones[ are supported natively](https://iframely.com).
 {% endhint %}
-

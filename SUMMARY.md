@@ -4,14 +4,16 @@
 
 ## 概述
 
-- [更新日志](getting-started/quickstart.md)
-- [Publish your docs](getting-started/publish-your-docs.md)
+- [更新日志](getting-started/update.md)
 
 ## API Reference
 
-- [API 密钥设置](basics/editor.md)
-- [API 安全设置](basics/markdown.md)
-- [API 端点](basics/images-and-media.md)
-- [API 响应状态](basics/interactive-blocks.md)
-- [支持语言](basics/openapi.md)
-- [支持货币](basics/integrations.md)
+- [API 密钥设置](api/appkey.md)
+- [API 安全设置](api/signature.md)
+- [API 端点](api/interface.md)
+  - [游戏 API](api/interface/game.md)
+  - [钱包 API](api/interface/bank.md)
+  - [交易 API](api/interface/transaction.md)
+- [API 响应状态](api/status.md)
+- [支持语言](api/openapi.md)
+- [支持货币](api/integrations.md)

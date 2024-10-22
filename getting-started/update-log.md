@@ -2,7 +2,7 @@
 icon: bullseye-arrow
 ---
 
-# Quickstart
+# 更新日志
 
 <figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-hero.png" alt=""><figcaption></figcaption></figure>
 
