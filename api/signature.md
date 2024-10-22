@@ -30,17 +30,19 @@ Operator 必须在每次向 Game Aggregator 发送 API 调用时，在标头中�
 
 **请求示例**
 
-<pre class="language-markdown"><code class="lang-markdown">url： http://&#x3C;test.api.com:port>/gameinfo/page:
+```markdown
+url： http://<test.api.com:port>/gameinfo/page:
+
 Body：
 {
     "playerId": "c180f4c5f1be830",
-<strong>    "gameCode": 1001,
-</strong>    "currency": "QC",
+    "gameCode": 1001,
+    "currency": "QC",
     "balance": 5000,
     "language": "ZH",
-<strong>    "timestamp":"1728986462192"
-</strong>}
-</code></pre>
+    "timestamp":"1728986462192"
+}
+```
 
 **API Secret**
 

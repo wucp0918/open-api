@@ -7,12 +7,7 @@ description: 接口返回的错误码，可对照此表查询原因
 
 
 
-| code   | message                |
-| ------ | ---------------------- |
-| 100000 | 参数错误，如参数缺失、格式错误、内容错误等等 |
-| 100001 | appKey错误               |
-| 100002 | 签名错误                   |
-| 100003 | 交易中                    |
+<table><thead><tr><th width="129">code</th><th>message</th></tr></thead><tbody><tr><td>100000</td><td>参数错误，如参数缺失、格式错误、内容错误等等</td></tr><tr><td>100001</td><td>appKey错误</td></tr><tr><td>100002</td><td>签名错误</td></tr><tr><td>100003</td><td>交易中</td></tr></tbody></table>
 
 
 
