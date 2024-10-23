@@ -44,7 +44,9 @@ description: 转账钱包端点
 
 <mark style="color:green;">`POST`</mark> `http://<test.api.com:port>/api/transaction/detail`
 
-游戏运营商可以通过结算时间查询来获取交易历史列表。
+此 API 允许游戏运营商通过提供 `betId` 并指定时间范围（使用 `fromTime` 和 `toTime` 参数，均为 UNIX 时间戳格式）来获取单笔交易的详细历史记录。
+
+`fromTime` 和 `toTime` 之间的时间范围必须在 7 天内。如果超过 7 天，查询将失败，并且不会返回任何数据。
 
 **Headers**
 
@@ -52,7 +54,7 @@ description: 转账钱包端点
 
 **Body**
 
-<table><thead><tr><th width="161">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>string</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr><tr><td>startTime</td><td>Long</td><td>用于检索交易开始的时间戳。</td></tr><tr><td>endTime</td><td>Long</td><td>用于检索交易至此的时间戳。</td></tr><tr><td>pageNo</td><td>Integer</td><td>页数</td></tr><tr><td>pageSize</td><td>Integer</td><td>页面大小。默认：10</td></tr></tbody></table>
+<table><thead><tr><th width="161">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>string</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr><tr><td>startTime</td><td>Long</td><td>用于检索交易开始的时间戳。</td></tr><tr><td>endTime</td><td>Long</td><td>用于检索交易至此的时间戳。</td></tr><tr><td>id</td><td>Integer</td><td>唯一标识此下注请求交易的ID。</td></tr></tbody></table>
 
 **Response**
 
