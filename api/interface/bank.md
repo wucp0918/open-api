@@ -12,7 +12,7 @@ description: Seamless wallet endpoints
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问api的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
@@ -61,7 +61,7 @@ description: Seamless wallet endpoints
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问api的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
@@ -90,7 +90,7 @@ description: Seamless wallet endpoints
 ```
 {% endtab %}
 
-{% tab title="200: 验证失败" %}
+{% tab title="200: 签名验证失败" %}
 ```json
 {
     "traceId": "uuid",
@@ -99,6 +99,18 @@ description: Seamless wallet endpoints
     "path": "/api/gameurl",
     "timestamp": "2024-10-22T07:09:47.377Z"
 }
+```
+{% endtab %}
+
+{% tab title="200：游戏进行中" %}
+```json
+{
+    "traceId": "uuid",
+    "code": 100003,
+    "message": "Trading in progress",
+    "path": "/api/bank/deposit",
+    "timestamp": "2024-10-22T09:35:39.842Z"
+}：
 ```
 {% endtab %}
 {% endtabs %}
@@ -113,7 +125,7 @@ description: Seamless wallet endpoints
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问api的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
@@ -167,7 +179,7 @@ transactionType (交易类型): DEPOSIT(存款)/WITHDRAWAL(取款)
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问api的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 

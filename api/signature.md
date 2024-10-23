@@ -18,9 +18,9 @@ description: 本页面详细解释了游戏集成系统强制执行的安全设�
 
 ## 验证
 
-Operator 必须在每次向 Game Aggregator 发送 API 调用时，在标头中携带 X-API-Key 和 X-Signature。
+Operator 必须在每次向 Game Aggregator 发送 API 调用时，在标头中携带 X-API-Key 、 X-Signature、
 
-这样可以让 集成系统验证运营商的身份。
+X-Timestamp，这样可以让 集成系统验证运营商的身份。
 
 ## X-Signature
 
