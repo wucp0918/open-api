@@ -12,16 +12,16 @@ description: Seamless wallet endpoints
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key<mark style="color:red;">*</mark></td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp<mark style="color:red;">*</mark></td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
-<table><thead><tr><th width="162">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>String</td><td>每个API请求生成的通用唯一标识符 (UUID)</td></tr><tr><td>playerId</td><td>Number</td><td>运营商系统中的用户名。</td></tr><tr><td>currency</td><td>Number</td><td>币种</td></tr></tbody></table>
+<table><thead><tr><th width="162">Name</th><th width="110">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId<mark style="color:red;">*</mark></td><td>String</td><td>每个请求的唯一标识符。 (UUID)</td></tr><tr><td>playerId<mark style="color:red;">*</mark></td><td>Number</td><td>运营商系统中的用户名。</td></tr><tr><td>currency<mark style="color:red;">*</mark></td><td>Number</td><td>币种</td></tr></tbody></table>
 
 **Response**
 
 {% tabs %}
-{% tab title="200" %}
+{% tab title="200: 请求成功" %}
 ```json
 {
     "traceId": "uuid",
@@ -61,11 +61,11 @@ description: Seamless wallet endpoints
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key<mark style="color:red;">*</mark></td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp<mark style="color:red;">*</mark></td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
-<table><thead><tr><th width="170">Name</th><th width="102">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>String</td><td>每个API请求生成的通用唯一标识符 (UUID)</td></tr><tr><td>playerId</td><td>String</td><td>运营商系统中用户的用户名</td></tr><tr><td>currency</td><td>String</td><td>币种</td></tr><tr><td>transferAmount</td><td>String</td><td>转账金额（最多8位小数，但不得低于0.00000001）</td></tr><tr><td>referenceId</td><td>String</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr></tbody></table>
+<table><thead><tr><th width="174">Name</th><th width="96">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId<mark style="color:red;">*</mark></td><td>String</td><td>每个请求的唯一标识符。 (UUID)</td></tr><tr><td>playerId<mark style="color:red;">*</mark></td><td>String</td><td>运营商系统中用户的用户名</td></tr><tr><td>currency<mark style="color:red;">*</mark></td><td>String</td><td>币种</td></tr><tr><td>transferAmount<mark style="color:red;">*</mark></td><td>String</td><td>转账金额（最多8位小数，但不得低于0.00000001）</td></tr><tr><td>referenceId<mark style="color:red;">*</mark></td><td>String</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr></tbody></table>
 
 **Response**
 
@@ -125,11 +125,11 @@ description: Seamless wallet endpoints
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key<mark style="color:red;">*</mark></td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp<mark style="color:red;">*</mark></td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
-<table><thead><tr><th width="170">Name</th><th width="102">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>String</td><td>每个API请求生成的通用唯一标识符 (UUID)</td></tr><tr><td>playerId</td><td>String</td><td>运营商系统中用户的用户名</td></tr><tr><td>currency</td><td>String</td><td>币种</td></tr><tr><td>transferAmount</td><td>String</td><td>转账金额（最多8位小数，但不得低于0.00000001）</td></tr><tr><td>referenceId</td><td>String</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr></tbody></table>
+<table><thead><tr><th width="181">Name</th><th width="93">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId<mark style="color:red;">*</mark></td><td>String</td><td>每个请求的唯一标识符。 (UUID)</td></tr><tr><td>playerId<mark style="color:red;">*</mark></td><td>String</td><td>运营商系统中用户的用户名</td></tr><tr><td>currency<mark style="color:red;">*</mark></td><td>String</td><td>币种</td></tr><tr><td>transferAmount<mark style="color:red;">*</mark></td><td>String</td><td>转账金额（最多8位小数，但不得低于0.00000001）</td></tr><tr><td>referenceId<mark style="color:red;">*</mark></td><td>String</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr></tbody></table>
 
 **Response**
 
@@ -179,11 +179,11 @@ transactionType (交易类型): DEPOSIT(存款)/WITHDRAWAL(取款)
 
 **Headers**
 
-<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="173">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key<mark style="color:red;">*</mark></td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp<mark style="color:red;">*</mark></td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
-<table><thead><tr><th width="170">Name</th><th width="102">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>String</td><td>每个API请求生成的通用唯一标识符 (UUID)</td></tr><tr><td>playerId</td><td>String</td><td>运营商系统中用户的用户名</td></tr><tr><td>currency</td><td>String</td><td>币种</td></tr><tr><td>referenceId</td><td>String</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr></tbody></table>
+<table><thead><tr><th width="170">Name</th><th width="102">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId<mark style="color:red;">*</mark></td><td>String</td><td>每个请求的唯一标识符。 (UUID)</td></tr><tr><td>playerId<mark style="color:red;">*</mark></td><td>String</td><td>运营商系统中用户的用户名</td></tr><tr><td>currency<mark style="color:red;">*</mark></td><td>String</td><td>币种</td></tr><tr><td>referenceId<mark style="color:red;">*</mark></td><td>String</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr></tbody></table>
 
 **Response**
 

@@ -12,29 +12,40 @@ description: 转账钱包端点
 
 **Headers**
 
-<table><thead><tr><th width="161">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="161">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key<mark style="color:red;">*</mark></td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp<mark style="color:red;">*</mark></td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
-<table><thead><tr><th width="161">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>string</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr><tr><td>startTime</td><td>Long</td><td>用于检索交易开始的时间戳。</td></tr><tr><td>endTime</td><td>Long</td><td>用于检索交易至此的时间戳。</td></tr><tr><td>pageNo</td><td>Integer</td><td>页数</td></tr><tr><td>pageSize</td><td>Integer</td><td>页面大小。默认：10</td></tr></tbody></table>
+<table><thead><tr><th width="161">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId<mark style="color:red;">*</mark></td><td>string</td><td>每个请求的唯一标识符。 (UUID)</td></tr><tr><td>startTime<mark style="color:red;">*</mark></td><td>Long</td><td>用于检索交易开始的时间戳。</td></tr><tr><td>endTime<mark style="color:red;">*</mark></td><td>Long</td><td>用于检索交易至此的时间戳。</td></tr><tr><td>page<mark style="color:red;">*</mark></td><td>Integer</td><td>页数</td></tr><tr><td>limit</td><td>Integer</td><td>页面大小。默认：10</td></tr></tbody></table>
 
 **Response**
 
 {% tabs %}
-{% tab title="200" %}
+{% tab title="200: SUCCESS" %}
 ```json
-{
-  "id": 1,
-  "name": "John",
-  "age": 30
-}
-```
-{% endtab %}
 
-{% tab title="400" %}
-```json
 {
-  "error": "Invalid request"
+    "data": {
+        "total": 1,
+        "data": [
+            {
+                "betId": "66ed36de40677ad3a7303624",
+                "playerId": "c180f4c5f1be830",
+                "orderId": "66ed36de40677ad3a7303624",
+                "gameCode": 1002,
+                "category": "BINGO",
+                "currency": "USD",
+                "bet": 10,
+                "win": 0,
+                "effectiveTurnover": 10,
+                "refundAmount": 0,
+                "status": 1,
+                "timestamp": 1726822110737
+            }    
+        ]
+    },
+    "code": 200,
+    "message": "Success"
 }
 ```
 {% endtab %}
@@ -50,21 +61,34 @@ description: 转账钱包端点
 
 **Headers**
 
-<table><thead><tr><th width="161">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key</td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp</td><td>访问API的时间戳</td></tr></tbody></table>
+<table><thead><tr><th width="161">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type<mark style="color:red;">*</mark></td><td><code>application/json</code></td></tr><tr><td>X-Signature<mark style="color:red;">*</mark></td><td>使用HMAC-SHA256算法生成的数字签名并进行MD5加密返回，使用运营商的API秘钥对请求体进行签名。</td></tr><tr><td>X-API-Key<mark style="color:red;">*</mark></td><td>运营商的API密钥</td></tr><tr><td>X-Timestamp<mark style="color:red;">*</mark></td><td>访问API的时间戳</td></tr></tbody></table>
 
 **Body**
 
-<table><thead><tr><th width="161">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId</td><td>string</td><td>由运营商系统为每个API请求生成的通用唯一标识符（UUID）。</td></tr><tr><td>startTime</td><td>Long</td><td>用于检索交易开始的时间戳。</td></tr><tr><td>endTime</td><td>Long</td><td>用于检索交易至此的时间戳。</td></tr><tr><td>id</td><td>Integer</td><td>唯一标识此下注请求交易的ID。</td></tr></tbody></table>
+<table><thead><tr><th width="161">Name</th><th width="109">Type</th><th>Description</th></tr></thead><tbody><tr><td>traceId<mark style="color:red;">*</mark></td><td>string</td><td>每个请求的唯一标识符。 (UUID)</td></tr><tr><td>startTime<mark style="color:red;">*</mark></td><td>Long</td><td>用于检索交易开始的时间戳。</td></tr><tr><td>endTime<mark style="color:red;">*</mark></td><td>Long</td><td>用于检索交易至此的时间戳。</td></tr><tr><td>betId<mark style="color:red;">*</mark></td><td>Integer</td><td>唯一标识此下注请求交易的ID。</td></tr></tbody></table>
 
 **Response**
 
 {% tabs %}
-{% tab title="200" %}
+{% tab title="200：SUCCESS" %}
 ```json
 {
-  "id": 1,
-  "name": "John",
-  "age": 30
+    "data": {
+        "betId": "66ed36de40677ad3a7303624",
+        "playerId": "c180f4c5f1be830",
+        "orderId": "66ed36de40677ad3a7303624",
+        "gameCode": 1002,
+        "category": "BINGO
+        "currency": "USD",
+        "bet": 10,
+        "win": 0,
+        "effectiveTurnover": 10,
+        "refundAmount": 0,
+        "status": 1,
+        "timestamp": 1726822110737
+    },
+    "code": 200,
+    "message": "Success"
 }
 ```
 {% endtab %}
