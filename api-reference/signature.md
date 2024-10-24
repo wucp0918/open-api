@@ -20,13 +20,13 @@ description: 本页面详细解释了游戏集成系统强制执行的安全设�
 
 Operator 必须在每次向 Game Aggregator 发送 API 调用时，在标头中携带 X-API-Key 、 X-Signature、
 
-X-Timestamp，这样可以让 集成系统验证运营商的身份。
+X-Timestamp，这样可以让集成系统验证运营商的身份。
 
 ## X-Signature
 
 请求标头中提供的此值用于防止数据篡改。
 
-签名是根据下方实例请求拼接参数，使用**`HMAC-SHA256`**算法后，再使用`MD5` 加密后返回
+签名是根据下方实例请求拼接参数，使用**`HMAC-SHA256`**算法后，再使用**`MD5`** 加密后返回
 
 **请求示例**
 
@@ -62,6 +62,3 @@ Body：
 3e6f527a24e76a159df9fc969f4dfc5e
 ```
 
-{% hint style="info" %}
-If you have multiple files, GitBook makes it easy to import full repositories too — allowing you to keep your GitBook content in sync.
-{% endhint %}

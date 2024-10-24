@@ -1,5 +1,5 @@
 ---
-description: 单一转账钱包端点
+description: 转账钱包端点
 ---
 
 # 游戏 API
@@ -63,11 +63,9 @@ description: 单一转账钱包端点
 {% endtab %}
 {% endtabs %}
 
-
-
 ## 返回游戏落地页URL
 
-<mark style="color:green;">`POST`</mark>  `http://<test.api.com:port>/api/gameurl`
+<mark style="color:green;">`POST`</mark> `http://<test.api.com:port>/api/gameurl`
 
 游戏运营商将打开一个新窗口，使用提供的游戏URL，以便用户访问游戏。
 
@@ -96,7 +94,7 @@ description: 单一转账钱包端点
 ```
 {% endtab %}
 
-{% tab title="200: 验证失败" %}
+{% tab title="200: fail" %}
 ```json
 {
     "traceId": "uuid",

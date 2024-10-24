@@ -1,8 +1,8 @@
 ---
-description: Seamless wallet endpoints
+description: 转账钱包端点
 ---
 
-# 钱包 API
+# 转账钱包 API
 
 ## 检查玩家钱包余额
 
@@ -49,11 +49,9 @@ description: Seamless wallet endpoints
 {% endtab %}
 {% endtabs %}
 
-
-
 ## 请求向玩家钱包存入额度
 
-<mark style="color:green;">`POST`</mark>  `http://<test.api.com:port>/api/bank/deposit`
+<mark style="color:green;">`POST`</mark> `http://<test.api.com:port>/api/bank/deposit`
 
 **重要提示**: referenceId 是每笔交易的唯一标识符。运营商需要为每个转账请求发送新的 referenceId。
 
@@ -117,7 +115,7 @@ description: Seamless wallet endpoints
 
 ## 请求从玩家钱包提取额度
 
-<mark style="color:green;">`POST`</mark>  `http://<test.api.com:port>/api/bank/withdraw`
+<mark style="color:green;">`POST`</mark> `http://<test.api.com:port>/api/bank/withdraw`
 
 **重要提示**: referenceId 是每笔交易的唯一标识符。运营商需要为每个转账请求发送新的 referenceId。
 
@@ -169,7 +167,7 @@ description: Seamless wallet endpoints
 
 ## 通过referenceId检索玩家的单笔存入/提取记录
 
-<mark style="color:green;">`POST`</mark>  `http://<test.api.com:port>/api/bank/withdraw`
+<mark style="color:green;">`POST`</mark> `http://<test.api.com:port>/api/bank/withdraw`
 
 响应参数可能会根据不同的状态而变化
 

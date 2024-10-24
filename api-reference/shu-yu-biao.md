@@ -1,11 +1,3 @@
 # 术语表
 
-| 术语                  | 定义                                                                                                                                              |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Key (X-API-Key) | <p>这是一个唯一的32个字符的字母数字字符串，用于标识发起API调用的运营商系统。</p><p>由集成系统生成，并在钱包集成过程中提供给运营商。</p>                                                                   |
-| API Secret          | <p>这是一个唯一的64个字符的字母数字字符串，用于通过<strong>HMAC-SHA256</strong>算法生成数字签名。</p><p>这个值由集成系统生成，并在钱包集成过程中提供给运营商。</p><p>它必须在运营商的系统中<strong>安全</strong>存储。</p> |
-| X-Signature         | 这是使用**HMAC-SHA256**算法生成的数字签名。通过使用运营商的API秘钥对API的请求体进行签名，然后再**MD5加密**后产生。                                                                         |
-| Whitelist           | 加白名单                                                                                                                                            |
-| Operator            | 运营商                                                                                                                                             |
-| HTTPS               | 超文本传输安全协议。通信协议使用SSL证书进行加密，以防止中间人攻击和窃听。                                                                                                          |
-| traceId             | 每个请求的唯一标识符。 (UUID)                                                                                                                              |
+<table><thead><tr><th width="195">术语</th><th>定义</th></tr></thead><tbody><tr><td>API Key (X-API-Key)</td><td><p>这是一个唯一的32个字符的字母数字字符串，用于标识发起API调用的运营商系统。</p><p>由集成系统生成，并在钱包集成过程中提供给运营商。</p></td></tr><tr><td>API Secret</td><td><p>这是一个唯一的64个字符的字母数字字符串，用于通过<strong>HMAC-SHA256</strong>算法生成数字签名。</p><p>这个值由集成系统生成，并在钱包集成过程中提供给运营商。</p><p>它必须在运营商的系统中<strong>安全</strong>存储。</p></td></tr><tr><td>X-Signature</td><td>这是使用<strong>HMAC-SHA256</strong>算法生成的数字签名。通过使用运营商的API秘钥对API的请求体进行签名，然后再<strong>MD5加密</strong>后产生。</td></tr><tr><td>Whitelist</td><td>加白名单</td></tr><tr><td>Operator</td><td>运营商</td></tr><tr><td>HTTPS</td><td>超文本传输安全协议。通信协议使用SSL证书进行加密，以防止中间人攻击和窃听。</td></tr><tr><td>traceId</td><td>每个请求的唯一标识符。 (UUID)</td></tr></tbody></table>
