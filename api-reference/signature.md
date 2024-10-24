@@ -7,8 +7,8 @@ description: 本页面详细解释了游戏集成系统强制执行的安全设�
 
 在对接 此API 集成系统之前，运营商必须申请请求 API 凭证。
 
-* API KEY - 一个唯一的 32 个字符的字母数字字符串，用于识别运营商。
-* API Secret - 一个唯一的 64 个字符的字母数字字符串，用于对请求体进行签名。
+* **API KEY** - 一个唯一的 32 个字符的字母数字字符串，用于识别运营商。
+* **API Secret** - 一个唯一的 64 个字符的字母数字字符串，用于对请求体进行签名。
 
 ## 传输层加密
 
@@ -18,9 +18,7 @@ description: 本页面详细解释了游戏集成系统强制执行的安全设�
 
 ## 验证
 
-Operator 必须在每次向 Game Aggregator 发送 API 调用时，在标头中携带 X-API-Key 、 X-Signature、
-
-X-Timestamp，这样可以让集成系统验证运营商的身份。
+Operator 必须在每次向 Game Aggregator 发送 API 调用时，在标头中携带 **`X-API-Key 、 X-Signature、X-Timestamp`**，这样可以让集成系统验证运营商的身份。
 
 ## X-Signature
 
