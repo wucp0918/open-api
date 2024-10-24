@@ -6,14 +6,14 @@
 
 ## API Reference
 
-* [API 密钥设置](api/appkey.md)
-* [API 安全设置](api/signature.md)
-* [API 端点](api/interface.md)
-  * [游戏 API](api/interface/game.md)
-  * [钱包 API](api/interface/bank.md)
-  * [交易 API](api/interface/transaction.md)
-* [API 响应状态](api/status.md)
-* [支持语言](api/openapi.md)
+* [API 密钥设置](api-reference/appkey.md)
+* [API 安全设置](api-reference/signature.md)
+* [API 端点](api-reference/interface/README.md)
+  * [游戏 API](api-reference/interface/game.md)
+  * [钱包 API](api-reference/interface/bank.md)
+  * [交易 API](api-reference/interface/transaction.md)
+* [API 响应状态](api-reference/status.md)
+* [支持语言](api-reference/openapi.md)
 * [术语表](api-reference/shu-yu-biao.md)
 
 <!-- prettier-ignore-end -->
