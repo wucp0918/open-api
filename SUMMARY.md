@@ -1,9 +1,8 @@
 # Table of contents
 
-## 概述
-
-* [必读](README.md)
-* [更新日志](gai-shu/geng-xin-ri-zhi.md)
+<!-- prettier-ignore-start -->
+* [概述](README.md)
+  * [更新日志](gai-shu/geng-xin-ri-zhi.md)
 
 ## API Reference
 
@@ -16,3 +15,5 @@
 * [API 响应状态](api/status.md)
 * [支持语言](api/openapi.md)
 * [术语表](api-reference/shu-yu-biao.md)
+
+<!-- prettier-ignore-end -->
