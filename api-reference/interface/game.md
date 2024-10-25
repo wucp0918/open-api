@@ -25,6 +25,7 @@ description: 转账钱包端点
 ```json
 {
     "traceId": "uuid"
+    "status": "OK"
     "data": {
         "total": 5,
         "data": [
@@ -43,9 +44,7 @@ description: 转账钱包端点
                 "avatarUrl": "https://<tst.api.com>/g7MQAzsTGHPFw4b.png"
             }
 	]
-     },
-    "code": 200,
-    "message": "Success"
+     }
 }
 ```
 {% endtab %}
@@ -54,10 +53,9 @@ description: 转账钱包端点
 ```json
 {
     "traceId": "uuid",
-    "code": 100000,
-    "message": "param error",
-    "path": "/api/gameinfo/list",
-    "timestamp": "2024-10-22T06:23:16.710Z"
+    "status": "PARAM_ERROR",
+    "message": "参数错误",
+    "timestamp": "2024-10-25T07:24:16.932Z"
 }
 ```
 {% endtab %}
@@ -83,13 +81,12 @@ description: 转账钱包端点
 {% tab title="200: SUCCESS" %}
 ```json
 {
+    "status": "OK",
     "traceId": "uuid",
     "data": {
         "gameUrl": "http://<test.api.com:port>?code=OTU4MzU1YzMzMTBhMWVkZDdkZjBmMWNiYmRlYWQwM2Y&lang=ZH",
         "token": "958355c3310a1edd7df0f1cbbdead03f"
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}
@@ -98,10 +95,9 @@ description: 转账钱包端点
 ```json
 {
     "traceId": "uuid",
-    "code": 100002,
-    "message": "signature error",
-    "path": "/api/gameurl",
-    "timestamp": "2024-10-22T07:09:47.377Z"
+    "status": "SIGN_ERROR",
+    "message": "签名错误",
+    "timestamp": "2024-10-25T07:26:42.339Z"
 }
 ```
 {% endtab %}
@@ -128,8 +124,7 @@ description: 转账钱包端点
 ```json
 {
     "traceId": "uuid",
-    "code": 200,
-    "message": "Success"
+    "status": "OK"
 }
 ```
 {% endtab %}

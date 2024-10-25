@@ -24,14 +24,13 @@ description: 转账钱包端点
 {% tab title="200: 请求成功" %}
 ```json
 {
+    "status": "OK"
     "traceId": "uuid",
     "data": {
         "balance": 5000,
         "currency": "QC",
         "playerId": "c180f4c5f1be830"
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}
@@ -71,6 +70,7 @@ description: 转账钱包端点
 {% tab title="200: SUCCESS" %}
 ```json
 {
+    "status": "OK"
     "traceId": "uuid",
     "data": {
         "referenceId": "uuid2",
@@ -81,9 +81,7 @@ description: 转账钱包端点
         "afterBalance": 5100,
         "transferAmount": 100,
         "timestamp": 1729582853216
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}
@@ -135,6 +133,7 @@ description: 转账钱包端点
 {% tab title="200: SUCCESS" %}
 ```json
 {
+    "status": "OK"
     "traceId": "uuid",
     "data": {
         "referenceId": "uuid2",
@@ -145,9 +144,7 @@ description: 转账钱包端点
         "afterBalance": 4900,
         "transferAmount": 100,
         "timestamp": 1729582853216
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}
@@ -189,6 +186,7 @@ transactionType (交易类型): DEPOSIT(存款)/WITHDRAWAL(取款)
 {% tab title="200: SUCCESS" %}
 ```json
 {
+    "status": "OK"
     "traceId": "uuid",
     "data": {
         "playerId": "c180f4c5f1be830",
@@ -201,9 +199,7 @@ transactionType (交易类型): DEPOSIT(存款)/WITHDRAWAL(取款)
         "beforeBalance": 5600,
         "afterBalance": 5700
         "timestamp": 1729496614023
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}

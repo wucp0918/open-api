@@ -25,6 +25,7 @@ description: 转账钱包端点
 ```json
 
 {
+    "status": "OK"
     "data": {
         "total": 1,
         "data": [
@@ -43,9 +44,7 @@ description: 转账钱包端点
                 "timestamp": 1726822110737
             }    
         ]
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}
@@ -73,6 +72,7 @@ description: 转账钱包端点
 {% tab title="200：SUCCESS" %}
 ```json
 {
+    "status": "OK"
     "data": {
         "betId": "66ed36de40677ad3a7303624",
         "playerId": "c180f4c5f1be830",
@@ -86,9 +86,7 @@ description: 转账钱包端点
         "refundAmount": 0,
         "status": 1,
         "timestamp": 1726822110737
-    },
-    "code": 200,
-    "message": "Success"
+    }
 }
 ```
 {% endtab %}
